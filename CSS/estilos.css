@@ -1,38 +1,83 @@
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    background-image: url('https://wallpaperplay.com/walls/full/b/5/8/37695.jpg');
-    background-size: 100vw 100vh;
-    height: 100vh;
+  font-family: Arial;
+  background-image: url('../img/fundo2.jpg');
+  background-size: auto 100vh;
+  height: 100vh;
+  font-size: 10px;
+}
+
+/* se a tela tiver pelo menos 400px */
+@media (min-width: 400px) {
+  body{
+    font-size: 14px;
   }
-  
-  .menu {
-    background-color: white;
+}
+/* breakpoint */
+@media (min-width: 600px) {
+  body{
+    font-size: 18px;
   }
-  
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .menu li {
-    list-style: none;
-  }
-  
-  a {
-    color: teal;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .site-subtitle,
-  .site-title {
-    color: whitesmoke;
-    text-align: center;
-  }
-  
-  .site-subtitle {
-    font-style: italic;
-  }
+}
+
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 4em;
+}
+
+.site-subtitle {
+  font-style: italic;
+}
+
+.img-portfolio {
+  width: 180px;
+  height: 180px;
+}
