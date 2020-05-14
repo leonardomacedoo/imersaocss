@@ -1,3 +1,9 @@
+/* Fontes que estou utilizando:
+font-family: 'Damion', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Roboto', sans-serif; */
+
+
 /* soft reset do css */
 * {
   margin: 0;
@@ -6,9 +12,10 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   background-image: url('../img/fundo2.jpg');
-  background-size: auto 100vh;
+  background-size: 100vw 100vh;
+  background-position: center;
   height: 100vh;
   font-size: 10px;
 }
@@ -26,11 +33,19 @@ body {
   }
 }
 
+/* breakpoint */
+@media (min-width: 1200px) {
+  body{
+    font-size: 20px;
+  }
+}
+
 header {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .menu {
@@ -50,12 +65,19 @@ header {
 }
 
 .menu a {
+  color: teal;
   display: block;
-  padding: 10px 20px;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.7s, color 0.7s;
+}
+
+.menu a:hover {
+  background-color: teal;
+  color: whitesmoke;
 }
 
 a {
-  color: teal;
   text-decoration: none;
 }
 
@@ -63,21 +85,128 @@ a:hover {
   text-decoration: underline;
 }
 
-.site-subtitle,
 .site-title {
-  color: whitesmoke;
+  color: aliceblue;
+  font-size: 4em;
+  line-height: 1.3em;
   text-align: center;
+  font-weight: lighter;
+  font-family: 'Damion', cursive;
+  /* animação */
+  opacity: 0;
+  animation: linear 1.5s fadeTitulo forwards;
 }
 
-.site-title {
-  font-size: 4em;
+@keyframes fadeTitulo {
+  100% {
+    opacity: 1;
+  }
 }
 
 .site-subtitle {
+  color: aliceblue;
+  width: 7em;
   font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Kaushan Script', cursive;
+  overflow: hidden;
+  border-right: .15em solid whitesmoke;
+  margin: 0 auto;
+  white-space: nowrap;
+  /*animação*/
+  animation: typewriter 2.5s steps(40) 1s 1 normal both, 
+  blinkTextCursor 0.75s steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: whitesmoke
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+.contato h2,
+.portfolio h2 {
+  font-family: 'Kaushan Script', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
-  width: 180px;
+  width: 240px;
   height: 180px;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 10px;
+  transition: transform 400ms;
 }
+
+.img-portfolio:hover {
+  transform: scale(1.2) ;
+}
+
+.contato .icons{
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  text-shadow: black 3px 3px 5px;
+  transition: text-shadow 0.6s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: whitesmoke 0px 0px 10px;
+  
+}
+
+

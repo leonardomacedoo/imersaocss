@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leonardo Macedo</title>
   <link rel="stylesheet" href="CSS/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Kaushan+Script&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1014a7fd0f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,8 +15,8 @@
     <nav class="menu">
       <ul>
         <li><a href="#">Sobre</a></li>
-        <li><a href="#">Portfólio</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
     <div>
@@ -22,25 +24,50 @@
       <h2 class="site-subtitle">Téc. Informática</h2>
     </div>
   </header>
-  <section>
-    <h2>Portfólio</h2>
-    <figure>
-      <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-      <figcaption>eCommerce</figcaption>
-    </figure>
-    <figure>
-      <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-      <figcaption>Mobile</figcaption>
-    </figure>
-    <figure>
-      <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-      <figcaption>Web design</figcaption>
-    </figure>
-    <figure>
-      <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
-      <figcaption>Projetos pessoais</figcaption>
-    </figure>
+
+  <section class="portfolio" id="portfolio">
+    <h2>Projetos</h2>
+
+    <div class="grid">
+      <figure>
+        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+        <figcaption>eCommerce</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+        <figcaption>Mobile</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+        <figcaption>Web design</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
+        <figcaption>Projetos pessoais</figcaption>
+      </figure>
+    </div>
+    
   </section>
+  <section class="contato" id="contato">
+    <h2>Contato</h2>
+
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/leonardomacedoo">
+        <i class="fab fa-github"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/leoomacedo_">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a target="_blank" href="https://www.facebook.com/lleonardo.macedo">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a target="_blank" href="https://www.instagram.com/_leoomacedo/">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+    </div>
+  </section>
+
 </body>
 
 </html>
